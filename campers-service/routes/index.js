@@ -1,9 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const health = require('./health');
+const users = require('./users');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+function generateRoutes(app) {
+  [users, health].forEach(config => {
+    app.use(config.path, config.router);
+  });
+}
 
-module.exports = router;
+module.exports = generateRoutes;

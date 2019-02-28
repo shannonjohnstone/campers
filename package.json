@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "run-p start:*",
+    "start:dev": "run-p start:*",
     "start:service": "npm start --prefix campers-service/",
-    "start:ui": "DEBUG=campers-service:* npm start --prefix campers-ui/"
+    "start:ui": "DEBUG=campers-service:* npm start:dev --prefix campers-ui/"
   },
   "repository": {
     "type": "git",
