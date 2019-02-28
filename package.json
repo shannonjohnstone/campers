@@ -1,0 +1,30 @@
+{
+  "name": "campers-leaderboard",
+  "version": "1.0.0",
+  "description": "Campers leaderboard application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "run-p start:*",
+    "start:service": "npm start --prefix campers-service/",
+    "start:ui": "DEBUG=campers-service:* npm start --prefix campers-ui/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shannonjohnstone/campers.git"
+  },
+  "keywords": [
+    "react",
+    "node",
+    "express"
+  ],
+  "author": "Shannon Johnstone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shannonjohnstone/campers/issues"
+  },
+  "homepage": "https://github.com/shannonjohnstone/campers#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
