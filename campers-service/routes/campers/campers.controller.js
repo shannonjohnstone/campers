@@ -8,6 +8,7 @@ const getCampersByLimit = (campers, queryLimit) => {
   return limit ? campers.slice(0, limit) : campers;
 };
 
+// TODO: maybe move logic to service ??
 const campersController = service => {
   return {
     getHighestTotal: (req, res) => {
