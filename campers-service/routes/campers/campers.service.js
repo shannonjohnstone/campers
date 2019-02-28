@@ -4,7 +4,7 @@ const campersServices = repository => {
   assert(repository, 'campersServices: repository required');
 
   return {
-    getCampers: () => repository.findAll(),
+    getCampers: async () => await repository.findAll(),
   };
 };
 

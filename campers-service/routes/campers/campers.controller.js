@@ -11,13 +11,17 @@ const getCampersByLimit = (campers, queryLimit) => {
 // TODO: maybe move logic to service ??
 const campersController = service => {
   return {
-    getHighestTotal: (req, res) => {
-      const result = sortHighToLow(service.getCampers(), 'total');
+    getHighestTotal: async (req, res) => {
+      const campers = await service.getCampers();
+
+      const result = sortHighToLow(campers, 'total');
 
       return res.json(getCampersByLimit(result, req.query.limit));
     },
-    getHighestTotalMonthly: (req, res) => {
-      const result = sortHighToLow(service.getCampers(), 'monthly_total');
+    getHighestTotalMonthly: async (req, res) => {
+      const campers = await service.getCampers();
+
+      const result = sortHighToLow(campers, 'monthly_total');
 
       return res.json(getCampersByLimit(result, req.query.limit));
     },
