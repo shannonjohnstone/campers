@@ -1,29 +1,18 @@
-const { bubbleSort } = require('../../lib/utils/array');
-
-// TODO: Move to utils
-const sortHighToLow = (arr, key) => bubbleSort(arr, 'high', key);
-
-const getCampersByLimit = (campers, queryLimit) => {
-  const limit = isNaN(queryLimit) ? 0 : Number(queryLimit);
-  return limit ? campers.slice(0, limit) : campers;
-};
-
-// TODO: maybe move logic to service ??
 const campersController = service => {
   return {
     getHighestTotal: async (req, res) => {
-      const campers = await service.getCampers();
-
-      const result = sortHighToLow(campers, 'total');
-
-      return res.json(getCampersByLimit(result, req.query.limit));
+      const campers = await service.getCampersSortHighToLow(
+        req.query.limit,
+        'total',
+      );
+      return res.json(campers);
     },
     getHighestTotalMonthly: async (req, res) => {
-      const campers = await service.getCampers();
-
-      const result = sortHighToLow(campers, 'monthly_total');
-
-      return res.json(getCampersByLimit(result, req.query.limit));
+      const campers = await service.getCampersSortHighToLow(
+        req.query.limit,
+        'monthly_total',
+      );
+      return res.json(campers);
     },
   };
 };

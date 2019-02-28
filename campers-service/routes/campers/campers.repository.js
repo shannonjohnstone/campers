@@ -4,7 +4,7 @@ const campersRepository = db => {
   assert(db, 'campersRepository: database instance required');
 
   return {
-    findAll: async () => await db.campers.findAll(),
+    findAll: async () => db.campers.findAll(),
   };
 };
 

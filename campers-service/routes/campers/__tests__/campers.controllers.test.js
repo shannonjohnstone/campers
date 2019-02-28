@@ -19,10 +19,10 @@ const controller = campersController(service);
 
 describe('campers controllers', () => {
   describe('getHighestTotal', () => {
-    test('should call .json, return all campers rated by overall total', () => {
+    test('should call .json, return all campers rated by overall total', async () => {
       const req = mockRequest({ query: { limit: 5 } });
       const res = mockResponse();
-      const result = controller.getHighestTotal(req, res);
+      const result = await controller.getHighestTotal(req, res);
 
       expect(result()).toEqual([
         {
@@ -64,10 +64,10 @@ describe('campers controllers', () => {
     });
   });
   describe('getHighestTotalMonthly', () => {
-    test('should return all campers rated by monthly total', () => {
+    test('should return all campers rated by monthly total', async () => {
       const req = mockRequest({ query: { limit: 5 } });
       const res = mockResponse();
-      const result = controller.getHighestTotalMonthly(req, res);
+      const result = await controller.getHighestTotalMonthly(req, res);
 
       expect(result()).toEqual([
         {

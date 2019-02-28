@@ -3,9 +3,9 @@ const database = require('../../../database');
 const campersRepository = require('../campers.repository');
 
 describe('campers repository', () => {
-  test('should findAll campers', () => {
-    const campers = campersRepository(database);
-    expect(campers.findAll()).toEqual(mockData.campers);
+  test('should findAll campers', async () => {
+    const campers = await campersRepository(database);
+    expect(await campers.findAll()).toEqual(mockData.campers);
   });
   test('should throw and error', () => {
     expect(() => campersRepository()).toThrow(
