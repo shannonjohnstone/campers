@@ -1,5 +1,5 @@
 const health = require('./health');
-const users = require('./users');
+const users = require('./campers');
 
 function generateRoutes(app) {
   [users, health].forEach(config => {
