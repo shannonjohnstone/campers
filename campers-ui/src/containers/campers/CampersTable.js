@@ -1,6 +1,7 @@
 import React from 'react';
 import { array } from 'prop-types';
 import { Table } from 'react-bootstrap';
+import Camper from './Camper';
 
 const CampersTable = ({ campers = [] }) => {
   return (
@@ -16,15 +17,10 @@ const CampersTable = ({ campers = [] }) => {
       </thead>
       <tbody>
         {campers.map((camper, index) => (
-          <tr key={camper.id}>
-            <td>{index + 1}</td>
-            <td>
-              <img src={camper.avatar} alt={camper.username} />
-            </td>
-            <td>{camper.username}</td>
-            <td>{camper.monthly_total}</td>
-            <td>{camper.total}</td>
-          </tr>
+          <Camper
+            key={camper.username}
+            camper={{ ...camper, rank: index + 1 }}
+          />
         ))}
       </tbody>
     </Table>
