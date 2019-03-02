@@ -8,7 +8,7 @@ export default function useFetchingData(initialData) {
     setIsFetching(true);
     const { data } = await apiCall();
     setData(data);
-    setIsFetching(true);
+    setIsFetching(false);
   }
 
   return { data, fetchData, isFetching };

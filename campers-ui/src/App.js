@@ -9,11 +9,7 @@ class App extends Component {
     return (
       <Container>
         <Row>
-          {/* <Col lg={6}> */}
           <Col>
-            <header className="">
-              <p>Campers Leader Board</p>
-            </header>
             <CampersContainer />
           </Col>
         </Row>

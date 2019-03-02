@@ -7,22 +7,20 @@ const CampersTable = ({ campers }) => {
       <thead>
         <tr>
           <th>Ranking</th>
-          <th>ID</th>
+          <th>Avatar</th>
           <th>Username</th>
-          <th>Profile Image</th>
           <th>Monthly Total</th>
           <th>All Time Total</th>
         </tr>
       </thead>
       <tbody>
-        {campers.map(camper => (
+        {campers.map((camper, index) => (
           <tr key={camper.id}>
-            <td>{camper.id}</td>
-            <td>{camper.id}</td>
-            <td>{camper.username}</td>
+            <td>{index + 1}</td>
             <td>
               <img src={camper.avatar} alt={camper.username} />
             </td>
+            <td>{camper.username}</td>
             <td>{camper.monthly_total}</td>
             <td>{camper.total}</td>
           </tr>
