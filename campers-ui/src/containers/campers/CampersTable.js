@@ -1,7 +1,8 @@
 import React from 'react';
+import { array } from 'prop-types';
 import { Table } from 'react-bootstrap';
 
-const CampersTable = ({ campers }) => {
+const CampersTable = ({ campers = [] }) => {
   return (
     <Table striped bordered hover responsive size="sm">
       <thead>
@@ -28,6 +29,10 @@ const CampersTable = ({ campers }) => {
       </tbody>
     </Table>
   );
+};
+
+CampersTable.propTypes = {
+  campers: array,
 };
 
 export default CampersTable;

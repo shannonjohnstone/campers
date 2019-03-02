@@ -1,12 +1,10 @@
 import { useState } from 'react';
 
-export default function useToggle(props) {
-  const { on = true, off = false } = props;
-
-  const [toggleState, setToggleState] = useState(on);
+export default function useToggle(defaultState) {
+  const [toggleState, setToggleState] = useState(defaultState);
 
   function toggle() {
-    const newState = toggleState === on ? off : on;
+    const newState = !toggleState;
     setToggleState(newState);
   }
 

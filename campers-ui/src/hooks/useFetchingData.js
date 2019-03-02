@@ -1,15 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-export default function useFetchingData(initialData) {
-  const [data, setData] = useState(initialData);
+export default function useFetchingData(apiCall, defaultState, watchers) {
+  const [data, setData] = useState(defaultState);
   const [isFetching, setIsFetching] = useState(false);
 
-  async function fetchData(apiCall) {
+  async function fetchData() {
     setIsFetching(true);
     const { data } = await apiCall();
     setData(data);
     setIsFetching(false);
   }
 
-  return { data, fetchData, isFetching };
+  useEffect(() => {
+    fetchData();
+  }, watchers);
+
+  return { data, isFetching };
 }
