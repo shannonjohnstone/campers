@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import CampersContainer from './containers/CampersContainer';
 import './App.css';
 
 class App extends Component {
@@ -9,6 +9,7 @@ class App extends Component {
         <header className="">
           <p>Campers Leader Board</p>
         </header>
+        <CampersContainer />
       </div>
     );
   }
