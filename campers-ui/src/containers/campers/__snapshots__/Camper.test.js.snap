@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Camper component Component snapshot 1`] = `
+<div>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          1
+        </td>
+        <td>
+          <img
+            alt="Luann Ballard"
+            src="https://www.tinygraphs.com/squares/859?theme=bythepool&numcolors=1&size=32&fmt=svg"
+          />
+        </td>
+        <td>
+          Luann Ballard
+        </td>
+        <td>
+          55
+        </td>
+        <td>
+          3543
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

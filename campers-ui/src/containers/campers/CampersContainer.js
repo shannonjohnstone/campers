@@ -14,13 +14,17 @@ const CampersContainer = () => {
     const limitQuery = '?limit=100';
 
     const fetchCampers = sortByTotal
-      ? campersApi.fetchTotalCampers.bind(null, limitQuery)
-      : campersApi.fetchTotalForMonthCampers.bind(null, limitQuery);
+      ? campersApi.fetchTotalCampers
+      : campersApi.fetchTotalForMonthCampers;
 
-    return fetchCampers();
+    return fetchCampers(limitQuery);
   };
 
-  const { data, isFetching } = useFetchingData(fetchCampers, [], [sortByTotal]);
+  const { data, isFetching, isError } = useFetchingData(
+    fetchCampers,
+    [],
+    [sortByTotal],
+  );
 
   return (
     <section>
@@ -31,13 +35,13 @@ const CampersContainer = () => {
             <h1>Campers Leaderboard</h1>
           </Col>
           <Col lg={{ span: 2, offset: 4 }}>
-            <Button onClick={setToggleCampers}>
+            <Button onClick={setToggleCampers} data-testid="toggleCampers">
               {sortByTotal ? 'Show Monthly' : 'Show All Time'}
             </Button>
           </Col>
         </Row>
       </header>
-      <Row>{!isFetching && <CampersTable campers={data} />}</Row>
+      <Row>{!isFetching && <CampersTable campers={data.data} />}</Row>
     </section>
   );
 };
