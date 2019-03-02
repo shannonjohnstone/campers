@@ -17,10 +17,7 @@ const CampersTable = ({ campers = [] }) => {
       </thead>
       <tbody>
         {campers.map((camper, index) => (
-          <Camper
-            key={camper.username}
-            camper={{ ...camper, rank: index + 1 }}
-          />
+          <Camper key={camper.username} camper={camper} />
         ))}
       </tbody>
     </Table>
