@@ -1,4 +1,5 @@
-function bubbleSort(a, type = 'low', key) {
+function bubbleSort(array, type = 'low', key) {
+  const a = array.concat();
   let swapped;
 
   const hasKeyValue = _key => item => (_key ? item[_key] : item);

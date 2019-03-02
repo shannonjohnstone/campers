@@ -26,39 +26,54 @@ describe('campers controllers', () => {
 
       expect(result()).toEqual([
         {
-          id: '5c77cb80fbb87b7c261036e0',
-          img: 'https://source.unsplash.com/collection/888146/300x300',
-          username: 'Romero Puckett',
-          monthly_total: 20,
-          total: 9988,
+          avatar:
+            'https://www.tinygraphs.com/squares/193?theme=heatwave&numcolors=7&size=32&fmt=svg',
+          id: '5c79f0601849fbad3eb24110',
+          img: 'https://source.unsplash.com/random/32x32',
+          monthly_total: 54,
+          rank: 1,
+          total: 9888,
+          username: 'Harvey Parks',
         },
         {
-          id: '5c77cb80ddb935bf3c616205',
-          img: 'https://source.unsplash.com/collection/888146/300x300',
-          username: 'Casey Sullivan',
-          monthly_total: 85,
-          total: 9967,
+          avatar:
+            'https://www.tinygraphs.com/squares/283?theme=duskfalling&numcolors=3&size=32&fmt=svg',
+          id: '5c79f06074fff10a333c4892',
+          img: 'https://source.unsplash.com/random/32x32',
+          monthly_total: 44,
+          rank: 2,
+          total: 9750,
+          username: 'Miranda Martin',
         },
         {
-          id: '5c77cb802b721a3bbcf58e1d',
-          img: 'https://source.unsplash.com/collection/888146/300x300',
-          username: 'Armstrong Mcdonald',
-          monthly_total: 45,
-          total: 9853,
+          avatar:
+            'https://www.tinygraphs.com/squares/75?theme=heatwave&numcolors=10&size=32&fmt=svg',
+          id: '5c79f0607758a3021941fc90',
+          img: 'https://source.unsplash.com/random/32x32',
+          monthly_total: 31,
+          rank: 3,
+          total: 9747,
+          username: 'Tillman Oconnor',
         },
         {
-          id: '5c77cb80d72c27286a022c2b',
-          img: 'https://source.unsplash.com/collection/888146/300x300',
-          username: 'Pam Wooten',
-          monthly_total: 10,
-          total: 9737,
-        },
-        {
-          id: '5c77cb80ccd2e72f45cd5311',
-          img: 'https://source.unsplash.com/collection/888146/300x300',
-          username: 'Kerri Britt',
+          avatar:
+            'https://www.tinygraphs.com/squares/1000?theme=heatwave&numcolors=6&size=32&fmt=svg',
+          id: '5c79ef86db6c48ba5cd6574a',
+          img: 'https://source.unsplash.com/random/32x32',
           monthly_total: 71,
-          total: 9666,
+          rank: 4,
+          total: 9719,
+          username: 'Fitzgerald Le',
+        },
+        {
+          avatar:
+            'https://www.tinygraphs.com/squares/172?theme=duskfalling&numcolors=5&size=32&fmt=svg',
+          id: '5c79ef8671a9fa568978880e',
+          img: 'https://source.unsplash.com/random/32x32',
+          monthly_total: 14,
+          rank: 5,
+          total: 9707,
+          username: 'Durham Sanchez',
         },
       ]);
     });
@@ -71,39 +86,54 @@ describe('campers controllers', () => {
 
       expect(result()).toEqual([
         {
-          id: '5c77cb801ef4949781491a15',
-          img: 'https://source.unsplash.com/collection/888146/300x300',
-          username: 'Freeman Walker',
+          avatar:
+            'https://www.tinygraphs.com/squares/898?theme=bythepool&numcolors=9&size=32&fmt=svg',
+          id: '5c79ef867cd1a9d4b7bd25a1',
+          img: 'https://source.unsplash.com/random/32x32',
           monthly_total: 100,
-          total: 8341,
+          rank: 1,
+          total: 8064,
+          username: 'Saunders Weeks',
         },
         {
-          id: '5c77cb80ac8be178d2e51367',
-          img: 'https://source.unsplash.com/collection/888146/300x300',
-          username: 'Ramirez Parker',
-          monthly_total: 100,
-          total: 5735,
-        },
-        {
-          id: '5c77cb8051e98259c781aedc',
-          img: 'https://source.unsplash.com/collection/888146/300x300',
-          username: 'Burns Powers',
-          monthly_total: 100,
-          total: 179,
-        },
-        {
-          id: '5c77cb80fca1efe1abc9d22f',
-          img: 'https://source.unsplash.com/collection/888146/300x300',
-          username: 'Audra Sparks',
+          avatar:
+            'https://www.tinygraphs.com/squares/440?theme=duskfalling&numcolors=6&size=32&fmt=svg',
+          id: '5c79ef867e2d9cbce2c5d7a9',
+          img: 'https://source.unsplash.com/random/32x32',
           monthly_total: 99,
-          total: 3130,
+          rank: 2,
+          total: 2301,
+          username: 'Castro Moon',
         },
         {
-          id: '5c77cb80c4ba3e8fc8a754eb',
-          img: 'https://source.unsplash.com/collection/888146/300x300',
-          username: 'Patterson Edwards',
+          avatar:
+            'https://www.tinygraphs.com/squares/686?theme=duskfalling&numcolors=10&size=32&fmt=svg',
+          id: '5c79f0602166e5579aeb7144',
+          img: 'https://source.unsplash.com/random/32x32',
+          monthly_total: 99,
+          rank: 3,
+          total: 803,
+          username: 'Rasmussen Livingston',
+        },
+        {
+          avatar:
+            'https://www.tinygraphs.com/squares/389?theme=heatwave&numcolors=4&size=32&fmt=svg',
+          id: '5c79ef8635d965f16fd9e3ed',
+          img: 'https://source.unsplash.com/random/32x32',
           monthly_total: 98,
-          total: 4199,
+          rank: 4,
+          total: 8040,
+          username: 'Kaufman Chang',
+        },
+        {
+          avatar:
+            'https://www.tinygraphs.com/squares/619?theme=duskfalling&numcolors=7&size=32&fmt=svg',
+          id: '5c79f0604e01ea27e1cd8e68',
+          img: 'https://source.unsplash.com/random/32x32',
+          monthly_total: 98,
+          rank: 5,
+          total: 3910,
+          username: 'Pearson Simon',
         },
       ]);
     });

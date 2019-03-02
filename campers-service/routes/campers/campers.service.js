@@ -11,6 +11,8 @@ const campersServices = repository => {
 
       return bubbleSort(campers, 'high', key);
     },
+    rankCampers: campers =>
+      campers.map((camper, index) => ({ ...camper, rank: index + 1 })),
     limitCampers: (campers, queryLimit = 0) => {
       assert(campers, 'limitCampers: campers array required');
 
