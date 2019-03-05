@@ -1,6 +1,8 @@
 # Campers UI
 
-Simple React UI to display data. Did not using redux as i thought for this project is was just overkill.
+Simple React UI to display data.
+
+Did not using redux as i thought for this project is was just overkill, the only item i can see a slight use for redux atm is the Loader. It would be sitting in the root of the application and be listen for a redux state change.
 
 ## Run Project
 ### `npm start`

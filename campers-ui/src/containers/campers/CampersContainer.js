@@ -11,20 +11,14 @@ const CampersContainer = () => {
   const [sortByTotal, setToggleCampers] = useToggle(true);
 
   const fetchCampers = () => {
-    const limitQuery = '?limit=100';
-
     const fetchCampers = sortByTotal
       ? campersApi.fetchTotalCampers
       : campersApi.fetchTotalForMonthCampers;
 
-    return fetchCampers(limitQuery);
+    return fetchCampers('?limit=100');
   };
 
-  const { data, isFetching, isError } = useFetchingData(
-    fetchCampers,
-    [],
-    [sortByTotal],
-  );
+  const { data, isFetching } = useFetchingData(fetchCampers, [], [sortByTotal]);
 
   return (
     <section>
